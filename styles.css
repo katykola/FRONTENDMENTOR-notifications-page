@@ -1,0 +1,167 @@
+:root{
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --very-light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+/* - Weights: 500, 800 */
+
+body{
+    font-size: 15px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--dark-grayish-blue);
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 0 1rem;
+    background-color: white;
+}
+
+@media screen and (min-width: 378px){
+    body{
+        background-color: var(--very-light-grayish-blue);
+    }
+    .container{
+        max-width: 700px;
+        margin: 4rem auto;
+        padding: 0.5rem 2rem;
+        border-radius: 10px;
+    }
+}
+
+/* Notifications information */
+
+.notifications{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.notifications-info{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.notifications-number{
+    margin-left: 10px;
+    background-color: var(--blue);
+    color: white;
+    padding: 2px 12px;
+    border-radius: 5px;
+}
+
+.notifications-read{
+    color: var(--grayish-blue);
+}
+
+.notifications-read:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+
+/* Notification */
+
+.notification{
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: min-content auto;
+    align-items: start;
+    padding: 15px;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.notification-image{
+    grid-template-columns: min-content auto min-content;
+}
+
+.notification-image:hover{
+    cursor: pointer;
+}
+
+.image{
+    width: 45px;
+}
+
+.profile-img{
+    width: 45px;
+}
+
+.notification-content{
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.profile-name{
+    color: var(--very-dark-blue);
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+.profile-name:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.thread{
+    color: var(--dark-grayish-blue);
+    font-weight: 800;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.thread:hover{
+    color: var(--blue);
+}
+
+.notification-date{
+    margin: 0;
+    color: var(--grayish-blue);
+}
+
+.read{
+    background-color: white;
+}
+
+.unread{
+    background-color: var(--very-light-grayish-blue);
+}
+
+.red-dot {
+    width: 10px;  
+    height: 10px;  
+    background-color: var(--red);
+    border-radius: 50%;  
+    display: inline-block; 
+}
+
+/* Message */
+
+.message{
+    grid-template-rows: auto auto;
+}
+
+
+.message-content{
+    grid-column: 2 / 3;
+    border-radius: 5px;
+    border: 1px solid var(--light-grayish-blue-2);
+    padding: 1rem;
+    margin: 0;
+}
+
+.message-content:hover{
+    background-color: var(--light-grayish-blue-2);
+    cursor: pointer;
+}
